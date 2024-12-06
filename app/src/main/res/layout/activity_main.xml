@@ -4,13 +4,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
@@ -20,8 +20,8 @@
             android:layout_gravity="end"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="5dp"
-            android:textSize="40sp"
-            android:text="50+20" />
+            android:text="50+20"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/results"
@@ -30,17 +30,21 @@
             android:layout_gravity="end"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            android:textSize="80sp"
-            android:text="30" />
+            android:text="30"
+            android:textSize="80sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom">
 
             <TableRow>
 
@@ -49,38 +53,37 @@
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="7dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="7dp"
-                    android:layout_marginStart="7dp"
                     android:text="CE"
                     android:textSize="50sp" />
 
-                <ImageButton
-                    android:contentDescription=""
+                <Button
                     android:id="@+id/backspace"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="95dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/baseline_arrow_back_24"
-                    />
+                    android:layout_marginTop="7dp"
+                    
+                    android:layout_marginBottom="7dp"
+                    android:textSize="50sp" />
 
                 <Button
                     android:id="@+id/parenthesesOne"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="95dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="7dp"
-                    android:layout_height="wrap_content"
                     android:text="("
                     android:textSize="50sp" />
 
                 <Button
                     android:id="@+id/parenthesesTwo"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="90dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="7dp"
                     android:text=")"
@@ -92,8 +95,8 @@
                 <Button
                     android:id="@+id/seven"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="110dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="7dp"
                     android:text="7"
                     android:textSize="40sp" />
@@ -101,7 +104,7 @@
                 <Button
                     android:id="@+id/eight"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="8"
                     android:textSize="40sp" />
@@ -109,7 +112,7 @@
                 <Button
                     android:id="@+id/nine"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="9"
                     android:textSize="40sp" />
@@ -124,6 +127,7 @@
                     android:text="/"
                     android:textSize="50sp" />
             </TableRow>
+
             <TableRow>
 
                 <Button
@@ -152,15 +156,16 @@
                     android:textSize="40sp" />
 
                 <Button
-                    android:id="@+id/multiply"
+                    android:id="@+id/multiplication"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="*"
+                    android:text="x"
                     android:textSize="50sp" />
             </TableRow>
+
             <TableRow>
 
                 <Button
@@ -198,6 +203,7 @@
                     android:text="-"
                     android:textSize="50sp" />
             </TableRow>
+
             <TableRow>
 
                 <Button
