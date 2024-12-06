@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/calculo"
+            android:id="@+id/calculation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -45,6 +45,7 @@
             <TableRow>
 
                 <Button
+                    android:id="@+id/ce"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
@@ -54,16 +55,19 @@
                     android:text="CE"
                     android:textSize="50sp" />
 
-                <Button
+                <ImageButton
+                    android:contentDescription=""
+                    android:id="@+id/backspace"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="95dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="7dp"
-                    android:layout_height="wrap_content"
-                    android:text="%"
-                    android:textSize="50sp" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    />
 
                 <Button
+                    android:id="@+id/parenthesesOne"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="95dp"
                     android:layout_marginTop="7dp"
@@ -73,6 +77,7 @@
                     android:textSize="50sp" />
 
                 <Button
+                    android:id="@+id/parenthesesTwo"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
@@ -85,6 +90,7 @@
             <TableRow>
 
                 <Button
+                    android:id="@+id/seven"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp"
@@ -93,6 +99,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/eight"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -100,6 +107,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/nine"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -107,6 +115,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/division"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -118,6 +127,7 @@
             <TableRow>
 
                 <Button
+                    android:id="@+id/four"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp"
@@ -126,6 +136,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/five"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -133,6 +144,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/six"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -140,6 +152,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/multiply"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -151,6 +164,7 @@
             <TableRow>
 
                 <Button
+                    android:id="@+id/one"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp"
@@ -159,6 +173,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/two"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -166,6 +181,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/three"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -173,6 +189,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/decrement"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -184,6 +201,7 @@
             <TableRow>
 
                 <Button
+                    android:id="@+id/zero"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp"
@@ -192,6 +210,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/dot"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -199,6 +218,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/equals"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -206,6 +226,7 @@
                     android:textSize="40sp" />
 
                 <Button
+                    android:id="@+id/sum"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
