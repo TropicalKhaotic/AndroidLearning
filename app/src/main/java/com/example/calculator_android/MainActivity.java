@@ -15,50 +15,81 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
-    private MaterialButton button0,button1,button2,button3,button4,button5,button6,button7,button8,button9,buttonCe,buttonBackspace,
-    buttonOpenParentheses, buttonCloseParentheses,buttonDivide, buttonMultiply, buttonMinus, buttonSum;
+    TextView screenResult, screenCalculation;
+    MaterialButton button0,button1,button2,button3,button4,button5,button6,button7,button8,button9,buttonCe,buttonBackspace,
+    buttonOpenParentheses, buttonCloseParentheses,buttonDivide, buttonMultiply, buttonMinus, buttonSum, buttonEquals, buttonDot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        screenResult = findViewById(R.id.results);
+        screenCalculation = findViewById(R.id.calculation);
 
-        Button num0 = findViewById(R.id.zero);
-        Button num1 = findViewById(R.id.one);
-        Button num2 = findViewById(R.id.two);
-        Button num3 = findViewById(R.id.three);
-        Button num4 = findViewById(R.id.four);
-        Button num5 = findViewById(R.id.five);
-        Button num6 = findViewById(R.id.six);
-        Button num7 = findViewById(R.id.seven);
-        Button num8 = findViewById(R.id.eight);
-        Button num9 = findViewById(R.id.nine);
+        assingId(button0, R.id.zero);
+        assingId(button1, R.id.one);
+        assingId(button2, R.id.two);
+        assingId(button3, R.id.three);
+        assingId(button4, R.id.four);
+        assingId(button5, R.id.five);
+        assingId(button6, R.id.six);
+        assingId(button7, R.id.seven);
+        assingId(button8, R.id.eight);
+        assingId(button9, R.id.nine);
+        assingId(buttonCe, R.id.ce);
+        assingId(buttonBackspace, R.id.backspace);
+        assingId(buttonOpenParentheses, R.id.parenthesesOne);
+        assingId(buttonCloseParentheses, R.id.parenthesesTwo);
+        assingId(buttonDivide, R.id.division);
+        assingId(buttonMultiply, R.id.multiplication);
+        assingId(buttonMinus, R.id.decrement);
+        assingId(buttonSum, R.id.sum);
+        assingId(buttonEquals, R.id.equals);
+        assingId(buttonDot, R.id.dot);
 
-        Button ce = findViewById(R.id.ce);
-        Button backspace = findViewById(R.id.backspace);
-        Button openParentheses = findViewById(R.id.parenthesesOne);
-        Button closeParentheses = findViewById(R.id.parenthesesTwo);
-        Button division = findViewById(R.id.division);
-        Button multiply = findViewById(R.id.multiplication);
-        Button decrease = findViewById(R.id.decrement);
-        Button sum = findViewById(R.id.sum);
-        Button dot = findViewById(R.id.dot);
-        Button equal = findViewById(R.id.equals);
+    }
 
-        TextView screenResult = findViewById(R.id.results);
-        TextView screenCalculation = findViewById(R.id.calculation);
+    void assingId(MaterialButton btn, int id) {
+        btn = findViewById(id);
+        btn.setOnClickListener(this);
+    }
 
-        backspace.setText("<");
+    void Cal(TextView screenCalculation) {
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        MaterialButton button = (MaterialButton) v;
+        String buttonText = button.getText().toString();
+        String calculationData = screenCalculation.getText().toString();
+
+        if(buttonText.equals("CE")) {
+            screenCalculation.setText("");
+            screenResult.setText("0");
+            return;
+        }
+        if(buttonText.equals("=")) {
+            screenResult.setText(screenCalculation.getText());
+            screenCalculation.setText("");
+            return;
+        }
+        if(buttonText.equals("C")) {
+            if (!screenCalculation.getText().equals("")) {
+                calculationData = calculationData.substring(0, calculationData.length() - 1);
+            }
+
+        } else {
+            if(!buttonText.equals("=")) {
+                calculationData = calculationData + buttonText;
+            }
+        }
+        screenCalculation.setText(calculationData);
 
     }
 }
