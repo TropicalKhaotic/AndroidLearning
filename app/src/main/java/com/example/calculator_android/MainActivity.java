@@ -15,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
+
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -90,6 +94,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         screenCalculation.setText(calculationData);
+        String finalResult = getResults(calculationData);
+
+        if (!finalResult.equals("Error")) {
+            screenResult.setText(finalResult);
+        }
 
     }
+
+    String getResults(String data) {
+        try {
+            Context context = Context.enter();
+            context.setOptimizationLevel(-1);
+            Scriptable scriptable = context.initStandardObjects();
+            String finalResult = context.evaluateString(scriptable,data, "Javascript", 1, null).toString();
+            return finalResult;
+
+        } catch (Exception e) {
+            return "Error";
+        }
+    }
+
 }
