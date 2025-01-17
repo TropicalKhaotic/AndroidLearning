@@ -18,6 +18,8 @@
     <string name="sum">+</string>
     <string name="delete">DEL</string>
     <string name="ac">AC</string>
+    <string name="percentage">%</string>
+
 
 
 </resources>
