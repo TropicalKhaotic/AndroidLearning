@@ -9,181 +9,212 @@
     android:padding="15dp"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/results"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="fill_horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="35dp"
-            android:text="0"
-            android:textColor="#FFFFFF"
-            android:textSize="70sp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/calulations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingHorizontal="15dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:paddingHorizontal="15dp"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
 
+
+
     <LinearLayout
-        android:id="@+id/nums"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:paddingTop="20dp">
-
-        <LinearLayout
+            android:id="@+id/nums"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="20dp">
 
-            <Button
-                android:id="@+id/ac_button"
-                style="@style/Button_op"
-                android:text="@string/ac"
-                android:textColor="@color/white"
-                />
-            <Button
-                android:id="@+id/seven"
-                style="@style/Button_1"
-                android:text="@string/Num_7"
-                />
-            <Button
-                android:id="@+id/four"
-                style="@style/Button_1"
-                android:text="@string/Num_4"
-                />
-            <Button
-                android:id="@+id/one"
-                style="@style/Button_1"
-                android:text="@string/Num_1"
-                />
-            <Button
-                android:id="@+id/backspace"
-                style="@style/Button_op"
-                android:textColor="@color/white"
-                android:text="@string/delete"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ac_button"
+                    style="@style/Button_op"
+                    android:text="@string/ac"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/seven"
+                    style="@style/Button_1"
+                    android:text="@string/Num_7"
+                    />
+                <Button
+                    android:id="@+id/four"
+                    style="@style/Button_1"
+                    android:text="@string/Num_4"
+                    />
+                <Button
+                    android:id="@+id/one"
+                    style="@style/Button_1"
+                    android:text="@string/Num_1"
+                    />
+                <Button
+                    android:id="@+id/backspace"
+                    style="@style/Button_op"
+                    android:textColor="@color/white"
+                    android:text="@string/delete"
+                    />
 
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/backspace_2"
+                    style="@style/Button_op"
+                    android:text="@string/delete"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/eight"
+                    style="@style/Button_1"
+                    android:text="@string/Num_8" />
+
+                <Button
+                    android:id="@+id/five"
+                    style="@style/Button_1"
+                    android:text="@string/Num_5" />
+
+                <Button
+                    android:id="@+id/two"
+                    style="@style/Button_1"
+                    android:text="@string/Num_2" />
+
+                <Button
+                    android:id="@+id/zero"
+                    style="@style/Button_1"
+                    android:text="@string/Num_0" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/percent_button"
+                    style="@style/Button_op"
+                    android:text="@string/percentage"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/nine"
+                    style="@style/Button_1"
+                    android:text="@string/Num_9" />
+
+                <Button
+                    android:id="@+id/six"
+                    style="@style/Button_1"
+                    android:text="@string/Num_6" />
+
+                <Button
+                    android:id="@+id/three"
+                    style="@style/Button_1"
+                    android:text="@string/Num_3" />
+
+                <Button
+                    android:id="@+id/dot_button"
+                    style="@style/Button_1"
+                    android:text="@string/dot" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/division_button"
+                    style="@style/Button_op"
+                    android:textColor="@color/white"
+                    android:text="@string/division" />
+
+                <Button
+                    android:id="@+id/multiplication_button"
+                    style="@style/Button_op"
+                    android:textColor="@color/white"
+                    android:text="@string/multiplication"
+                    />
+                <Button
+                    android:id="@+id/minus_button"
+                    style="@style/Button_op"
+                    android:textColor="@color/white"
+                    android:text="@string/minus"
+                    />
+                <Button
+                    android:id="@+id/sum_button"
+                    style="@style/Button_op"
+                    android:textColor="@color/white"
+                    android:text="@string/sum"
+                    />
+                <Button
+                    android:id="@+id/equals_button"
+                    style="@style/Button_op"
+                    android:textColor="@color/white"
+                    android:text="@string/equals"
+                    />
+
+
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/backspace_2"
-                style="@style/Button_op"
-                android:text="@string/delete"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/eight"
-                style="@style/Button_1"
-                android:text="@string/Num_8" />
-
-            <Button
-                android:id="@+id/five"
-                style="@style/Button_1"
-                android:text="@string/Num_5" />
-
-            <Button
-                android:id="@+id/two"
-                style="@style/Button_1"
-                android:text="@string/Num_2" />
-
-            <Button
-                android:id="@+id/zero"
-                style="@style/Button_1"
-                android:text="@string/Num_0" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                style="@style/Button_op"
-                android:textColor="@color/white"/>
-
-            <Button
-                android:id="@+id/nine"
-                style="@style/Button_1"
-                android:text="@string/Num_9" />
-
-            <Button
-                android:id="@+id/six"
-                style="@style/Button_1"
-                android:text="@string/Num_6" />
-
-            <Button
-                android:id="@+id/three"
-                style="@style/Button_1"
-                android:text="@string/Num_3" />
-
-            <Button
-                android:id="@+id/dot_button"
-                style="@style/Button_1"
-                android:text="@string/dot" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/division_button"
-                style="@style/Button_op"
-                android:textColor="@color/white"
-                android:text="@string/division" />
-
-            <Button
-                android:id="@+id/multiplication_button"
-                style="@style/Button_op"
-                android:textColor="@color/white"
-                android:text="@string/multiplication"
-                />
-            <Button
-                android:id="@+id/minus_button"
-                style="@style/Button_op"
-                android:textColor="@color/white"
-                android:text="@string/minus"
-                />
-            <Button
-                android:id="@+id/sum_button"
-                style="@style/Button_op"
-                android:textColor="@color/white"
-                android:text="@string/sum"
-                />
-            <Button
-                android:id="@+id/equals_button"
-                style="@style/Button_op"
-                android:textColor="@color/white"
-                android:text="@string/equals"
-                />
-
-
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 </RelativeLayout>
