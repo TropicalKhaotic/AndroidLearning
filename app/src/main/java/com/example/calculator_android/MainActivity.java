@@ -10,13 +10,14 @@ public class MainActivity extends AppCompatActivity {
     double first_num;
     String operation;
 
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView screen_result = findViewById(R.id.results);
-        TextView screen_calculation = findViewById(R.id.calulations);
+        TextView screen_calculation = findViewById(R.id.calculations);
 
         Button num0 = findViewById(R.id.zero);
         Button num1 = findViewById(R.id.one);
