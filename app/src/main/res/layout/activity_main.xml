@@ -25,15 +25,16 @@
         <RelativeLayout
             android:id="@+id/calculation_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            >
 
             <TextView
                 android:id="@+id/calculations"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:textAlignment="textStart"
                 android:text=""
+                android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="40sp">
 
@@ -52,13 +53,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            >
 
             <TextView
                 android:id="@+id/results"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
                 android:text="0"
                 android:textAlignment="textEnd"
                 android:textColor="@color/white"
@@ -79,7 +81,7 @@
             android:id="@+id/line1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="5dp"
+            android:gravity="center"
             >
 
             <Button
@@ -130,7 +132,7 @@
             android:id="@+id/line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="5dp"
+            android:gravity="center"
             android:layout_below="@+id/line1"
             >
 
@@ -176,7 +178,7 @@
             android:id="@+id/line3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="5dp"
+            android:gravity="center"
             android:layout_below="@+id/line2"
             >
 
@@ -224,7 +226,7 @@
             android:id="@+id/line4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="5dp"
+            android:gravity="center"
             android:layout_below="@+id/line3"
             >
 
@@ -271,7 +273,7 @@
             android:id="@+id/line5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="5dp"
+            android:gravity="center"
             android:layout_below="@+id/line4"
             >
 
