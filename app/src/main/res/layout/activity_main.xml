@@ -6,14 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deep_blue"
-    android:padding="15dp"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/test"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="15dp">
+        android:layout_height="match_parent">
 
     </RelativeLayout>
 
@@ -32,28 +31,9 @@
                 android:id="@+id/calculations"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textEnd"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="40sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/result_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:layout_below="@+id/calculation_text">
-
-            <TextView
-                android:id="@+id/results"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0"
+                android:paddingHorizontal="10dp"
                 android:textAlignment="textStart"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="40sp">
 
@@ -64,17 +44,42 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_above="@+id/buttons">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="40sp">
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:gravity="bottom"
         android:layout_alignBottom="@id/test">
 
         <RelativeLayout
             android:id="@+id/line1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
             >
 
             <Button
@@ -125,6 +130,7 @@
             android:id="@+id/line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
             android:layout_below="@+id/line1"
             >
 
@@ -170,6 +176,7 @@
             android:id="@+id/line3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
             android:layout_below="@+id/line2"
             >
 
@@ -217,6 +224,7 @@
             android:id="@+id/line4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
             android:layout_below="@+id/line3"
             >
 
@@ -263,6 +271,7 @@
             android:id="@+id/line5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
             android:layout_below="@+id/line4"
             >
 
