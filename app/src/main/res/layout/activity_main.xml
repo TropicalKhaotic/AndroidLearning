@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -10,275 +10,304 @@
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:id="@+id/text_view"
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/Num_0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/backspace_2"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintVertical_weight="1"
+
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/calculations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/main">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/backspace"
+        style="@style/Button_op"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp">
+        android:layout_marginTop="5dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintEnd_toStartOf="@id/zero"
+        app:layout_constraintStart_toStartOf="@id/main">
 
+    </Button>
 
-        <TextView
-            android:id="@+id/calculations"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textSize="40sp">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/results"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/calculations"
-            android:paddingTop="50dp"
-            android:text="0"
-            android:textAlignment="textEnd"
-            android:textColor="@color/white"
-            android:textSize="40sp">
-
-        </TextView>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/buttons"
+    <Button
+        android:id="@+id/zero"
+        style="@style/Button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_below="@+id/text_view"
-        android:layout_centerHorizontal="true">
-
-        <Button
-            android:id="@+id/ac_button"
-            style="@style/Button_op"
-            android:layout_above="@+id/seven"
-            android:layout_marginEnd="5dp"
-            android:text="@string/ac"
-            android:textColor="@color/white">
-
-        </Button>
-
-        <Button
-            android:id="@+id/backspace"
-            style="@style/Button_op"
-            android:layout_above="@+id/eight"
-            android:layout_toEndOf="@id/ac_button"
-            android:layout_marginEnd="5dp"
-            android:text="@string/delete"
-            android:textColor="@color/white"
-
-            >
-
-        </Button>
-
-        <Button
-            android:id="@+id/percent_button"
-            style="@style/Button_op"
-            android:layout_above="@+id/nine"
-            android:layout_toEndOf="@id/backspace"
-            android:layout_marginEnd="5dp"
-            android:text="@string/percentage"
-            android:textColor="@color/white">
-
-        </Button>
-
-        <Button
-            android:id="@+id/division_button"
-            style="@style/Button_op"
-            android:layout_above="@+id/multiplication_button"
-            android:layout_toEndOf="@id/percent_button"
-            android:text="@string/division"
-            android:textColor="@color/white">
-
-        </Button>
-
-        <Button
-            android:id="@+id/seven"
-            style="@style/Button_1"
-            android:layout_above="@+id/four"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_7">
-
-        </Button>
-
-        <Button
-            android:id="@+id/eight"
-            style="@style/Button_1"
-            android:layout_above="@+id/five"
-            android:layout_toEndOf="@id/seven"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_8">
-
-        </Button>
-
-        <Button
-            android:id="@+id/nine"
-            style="@style/Button_1"
-            android:layout_above="@+id/six"
-            android:layout_toEndOf="@id/eight"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_9">
-
-        </Button>
-
-        <Button
-            android:id="@+id/multiplication_button"
-            style="@style/Button_op"
-            android:layout_above="@+id/minus_button"
-            android:layout_toEndOf="@id/nine"
-            android:layout_marginTop="10dp"
-
-            android:text="@string/multiplication"
-            android:textColor="@color/white">
-
-        </Button>
-
-        <Button
-            android:id="@+id/four"
-            style="@style/Button_1"
-            android:layout_above="@+id/one"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_4">
-
-        </Button>
-
-        <Button
-            android:id="@+id/five"
-            style="@style/Button_1"
-            android:layout_above="@+id/two"
-            android:layout_toEndOf="@id/four"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_5">
-
-        </Button>
-
-        <Button
-            android:id="@+id/six"
-            style="@style/Button_1"
-            android:layout_above="@+id/three"
-            android:layout_toEndOf="@id/five"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_6"
-
-            >
-
-        </Button>
-
-        <Button
-            android:id="@+id/minus_button"
-            style="@style/Button_op"
-            android:layout_above="@+id/sum_button"
-            android:layout_toEndOf="@id/six"
-            android:layout_marginTop="10dp"
-
-            android:text="@string/minus"
-            android:textColor="@color/white"
-
-            >
-
-        </Button>
-
-        <Button
-            android:id="@+id/one"
-            style="@style/Button_1"
-            android:layout_above="@+id/backspace_2"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_1">
-
-        </Button>
-
-        <Button
-            android:id="@+id/two"
-            style="@style/Button_1"
-            android:layout_above="@+id/zero"
-            android:layout_toEndOf="@id/one"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_2">
-
-        </Button>
-
-        <Button
-            android:id="@+id/three"
-            style="@style/Button_1"
-            android:layout_above="@+id/dot_button"
-            android:layout_toEndOf="@id/two"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/Num_3">
-
-        </Button>
-
-        <Button
-            android:id="@+id/sum_button"
-            style="@style/Button_op"
-            android:layout_above="@+id/equals_button"
-            android:layout_toEndOf="@id/three"
-            android:layout_marginTop="10dp"
-
-            android:text="@string/sum"
-            android:textColor="@color/white">
-
-        </Button>
-
-        <Button
-            android:id="@+id/backspace_2"
-            style="@style/Button_op"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/delete"
-            android:textColor="@color/white">
-
-        </Button>
-
-        <Button
-            android:id="@+id/zero"
-            style="@style/Button_1"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/backspace_2"
-            android:text="@string/Num_0">
-
-        </Button>
-
-        <Button
-            android:id="@+id/dot_button"
-            style="@style/Button_1"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:layout_toEndOf="@id/zero"
-            android:text="@string/dot">
-
-        </Button>
-
-        <Button
-            android:id="@+id/equals_button"
-            style="@style/Button_op"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@id/dot_button"
-            android:layout_marginTop="10dp"
-
-            android:text="@string/equals"
-            android:textColor="@color/white">
-
-        </Button>
+        android:layout_marginTop="5dp"
+        android:text="@string/Num_0"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toStartOf="@+id/dot_button"
+        app:layout_constraintStart_toEndOf="@id/backspace">
 
 
-    </RelativeLayout>
+    </Button>
 
+    <Button
+        android:id="@+id/dot_button"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintEnd_toStartOf="@+id/equals_button"
+        app:layout_constraintStart_toEndOf="@id/zero">
 
-</RelativeLayout>
+    </Button>
+
+    <Button
+        android:id="@+id/equals_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equals"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toEndOf="@id/dot_button">
+
+    </Button>
+
+    <Button
+        android:id="@+id/one"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_1"
+        app:layout_constraintBottom_toTopOf="@+id/backspace"
+        app:layout_constraintEnd_toStartOf="@id/two"
+        app:layout_constraintStart_toStartOf="@id/main">
+
+    </Button>
+
+    <Button
+        android:id="@+id/two"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_2"
+        app:layout_constraintBottom_toTopOf="@id/zero"
+        app:layout_constraintEnd_toStartOf="@id/three"
+        app:layout_constraintStart_toEndOf="@id/one">
+
+    </Button>
+
+    <Button
+        android:id="@+id/three"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_3"
+        app:layout_constraintBottom_toTopOf="@+id/dot_button"
+        app:layout_constraintEnd_toStartOf="@+id/sum_button"
+        app:layout_constraintStart_toEndOf="@id/two">
+
+    </Button>
+
+    <Button
+        android:id="@+id/sum_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/sum"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/equals_button"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toEndOf="@id/three">
+
+    </Button>
+
+    <Button
+        android:id="@+id/four"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_4"
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintEnd_toStartOf="@id/two"
+        app:layout_constraintStart_toStartOf="@id/main">
+
+    </Button>
+
+    <Button
+        android:id="@+id/five"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_5"
+        app:layout_constraintBottom_toTopOf="@id/two"
+        app:layout_constraintEnd_toStartOf="@id/three"
+        app:layout_constraintStart_toEndOf="@id/one">
+
+    </Button>
+
+    <Button
+        android:id="@+id/six"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_6"
+        app:layout_constraintBottom_toTopOf="@+id/three"
+        app:layout_constraintEnd_toStartOf="@+id/sum_button"
+        app:layout_constraintStart_toEndOf="@id/two">
+
+    </Button>
+
+    <Button
+        android:id="@+id/minus_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/minus"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/sum_button"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toEndOf="@id/three">
+
+    </Button>
+
+    <Button
+        android:id="@+id/seven"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_7"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintEnd_toStartOf="@id/two"
+        app:layout_constraintStart_toStartOf="@id/main">
+
+    </Button>
+
+    <Button
+        android:id="@+id/eight"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_8"
+        app:layout_constraintBottom_toTopOf="@id/five"
+        app:layout_constraintEnd_toStartOf="@id/three"
+        app:layout_constraintStart_toEndOf="@id/one">
+
+    </Button>
+
+    <Button
+        android:id="@+id/nine"
+        style="@style/Button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/Num_9"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintEnd_toStartOf="@+id/sum_button"
+        app:layout_constraintStart_toEndOf="@id/two">
+
+    </Button>
+
+    <Button
+        android:id="@+id/multiplication_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/multiplication"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/minus_button"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toEndOf="@id/three">
+
+    </Button>
+
+    <Button
+        android:id="@+id/ac_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/ac"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/seven"
+        app:layout_constraintEnd_toStartOf="@id/backspace_2"
+        app:layout_constraintStart_toStartOf="@id/main">
+
+    </Button>
+
+    <Button
+        android:id="@+id/backspace_2"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/eight"
+        app:layout_constraintEnd_toStartOf="@id/percent_button"
+        app:layout_constraintStart_toEndOf="@id/ac_button">
+
+    </Button>
+
+    <Button
+        android:id="@+id/percent_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/percentage"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/nine"
+        app:layout_constraintEnd_toStartOf="@id/division_button"
+        app:layout_constraintStart_toEndOf="@id/backspace_2">
+
+    </Button>
+
+    <Button
+        android:id="@+id/division_button"
+        style="@style/Button_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/division"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/multiplication_button"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toEndOf="@id/percent_button">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
